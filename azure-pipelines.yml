@@ -10,23 +10,26 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: TerraformInstaller@0
-  inputs:
-    terraformVersion: 'latest'
-  
-- task: TerraformTaskV3@3
-  inputs:
-    provider: 'azurerm'
-    command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)\2-modules'
-    backendServiceArm: 'Visual Studio Premium with MSDN(7ed35d9d-6e1e-428e-8325-fcbaa8142bc2)'
-    backendAzureRmResourceGroupName: 'TF-STATE-RGP'
-    backendAzureRmStorageAccountName: 'sltfstatestg'
-    backendAzureRmContainerName: 'state'
-    backendAzureRmKey: '3pipeline.tfstate'
+- script: |
+  ls $(System.DefaultWorkingDirectory)
 
-- task: TerraformTaskV3@3
-  inputs:
-    provider: 'azurerm'
-    command: 'apply'
-    workingDirectory: '$(System.DefaultWorkingDirectory)\2-modules'
+#- task: TerraformInstaller@0
+#  inputs:
+#    terraformVersion: 'latest'
+  
+#- task: TerraformTaskV3@3
+#  inputs:
+#    provider: 'azurerm'
+#    command: 'init'
+#    workingDirectory: '$(System.DefaultWorkingDirectory)\2-modules'
+#    backendServiceArm: 'Visual Studio Premium with MSDN(7ed35d9d-6e1e-428e-8325-fcbaa8142bc2)'
+#    backendAzureRmResourceGroupName: 'TF-STATE-RGP'
+#    backendAzureRmStorageAccountName: 'sltfstatestg'
+#    backendAzureRmContainerName: 'state'
+#    backendAzureRmKey: '3pipeline.tfstate'
+
+#- task: TerraformTaskV3@3
+#  inputs:
+#    provider: 'azurerm'
+#    command: 'apply'
+#    workingDirectory: '$(System.DefaultWorkingDirectory)\2-modules'
