@@ -5,7 +5,7 @@ data "azurerm_virtual_network" "vnet" {
   resource_group_name = var.rgp_name
 }
 
-data "azurerm_subnet" "snt-dev" {
+data "azurerm_subnet" "snt_dev" {
   name                 = upper("${var.name_unit}-${var.name_app}-${var.name_env}-SNT-DEV")
   resource_group_name  = var.rgp_name
   virtual_network_name = data.azurerm_virtual_network.vnet.name

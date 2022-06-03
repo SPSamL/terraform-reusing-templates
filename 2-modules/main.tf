@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "rgp_dev" {
   name     = upper("${local.upper_resource_prefix}-RGP-DEV")
 }
 
-module "virtual_machine" {
+module "virtual-machine" {
   source     = "..\\custom-modules\\virtual-machine"
   location   = var.location
   name_unit  = var.name_unit

@@ -18,7 +18,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)\2-modules'
+    workingDirectory: '2-modules'
     backendServiceArm: 'Visual Studio Premium with MSDN(7ed35d9d-6e1e-428e-8325-fcbaa8142bc2)'
     backendAzureRmResourceGroupName: 'TF-STATE-RGP'
     backendAzureRmStorageAccountName: 'sltfstatestg'
@@ -29,4 +29,4 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'apply'
-    workingDirectory: '$(System.DefaultWorkingDirectory)\2-modules'
+    workingDirectory: '2-modules'
