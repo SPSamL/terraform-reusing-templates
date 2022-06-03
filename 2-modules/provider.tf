@@ -8,14 +8,13 @@ terraform {
   }
 
   # Backends define where and how operations are performed. REF: https://www.terraform.io/docs/language/settings/backends/index.html
-  backend "azurerm" {
-    resource_group_name  = "TF-STATE-RGP"
-    storage_account_name = "sltfstatestg"
-    container_name       = "state"
-    key                  = "2modules.tfstate"
-  }
+  backend "azurerm" {}
 }
 
 provider "azurerm" {
   features {}
 }
+
+# Commands to run
+# terraform init -backend-config="key=2modules.tfstate" -backend-config="container_name=state" -backend-config="storage_account_name=sltfstatestg" -backend-config="resource_group_name=TF-STATE-RGP"
+# terraform apply
