@@ -10,8 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: |
-  ls $(System.DefaultWorkingDirectory)
+- script: ls $(System.DefaultWorkingDirectory)
 
 #- task: TerraformInstaller@0
 #  inputs:
