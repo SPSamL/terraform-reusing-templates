@@ -12,9 +12,9 @@ pool:
 steps:
 - task: TerraformInstaller@0
   inputs:
-    terraformVersion: '1.0.7'
+    terraformVersion: 'latest'
   
-- task: TerraformTaskV2@2
+- task: TerraformTaskV3@3
   inputs:
     provider: 'azurerm'
     command: 'init'
@@ -25,7 +25,7 @@ steps:
     backendAzureRmContainerName: 'state'
     backendAzureRmKey: '3pipeline.tfstate'
 
-- task: TerraformTaskV2@2
+- task: TerraformTaskV3@3
   inputs:
     provider: 'azurerm'
     command: 'apply'
