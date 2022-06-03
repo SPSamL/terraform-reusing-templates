@@ -14,6 +14,6 @@ module "virtual-machine" {
   name_unit  = var.name_unit
   name_app   = var.name_app
   name_env   = var.name_env
-  rgp_name   = azurerm_resource_group.rgp_dev
+  rgp_name   = azurerm_resource_group.rgp_dev.name
   vm_configs = var.vm_configs
 }
