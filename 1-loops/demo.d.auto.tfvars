@@ -1,3 +1,3 @@
-name-app = "DEMO"
-name-env = "D"
+name_app = "DEMO"
+name_env = "D"
 location = "centralus"

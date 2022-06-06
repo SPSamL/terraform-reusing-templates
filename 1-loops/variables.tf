@@ -19,15 +19,15 @@ variable "location" {
   type = string
 }
 
-variable "name-unit" {
+variable "name_unit" {
   type    = string
   default = "SL"
 }
 
-variable "name-app" {
+variable "name_app" {
   type = string
 }
 
-variable "name-env" {
+variable "name_env" {
   type = string
 }
