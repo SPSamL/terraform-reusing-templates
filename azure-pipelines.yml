@@ -23,7 +23,7 @@ steps:
     backendAzureRmResourceGroupName: 'TF-STATE-RGP'
     backendAzureRmStorageAccountName: 'sltfstatestg'
     backendAzureRmContainerName: 'state'
-    backendAzureRmKey: '3pipeline.tfstate'
+    backendAzureRmKey: '2modules.tfstate'
 
 - task: TerraformTaskV3@3
   inputs:
