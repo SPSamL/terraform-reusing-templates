@@ -9,6 +9,10 @@ variable "list" {
       ln = "larko"
     },
     {
+      fn = "mickey"
+      ln = "duck"
+    },
+    {
       fn = "bill"
       ln = "ding"
     }
