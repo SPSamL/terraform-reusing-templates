@@ -24,11 +24,11 @@ steps:
     backendAzureRmStorageAccountName: 'sltfstatestg'
     backendAzureRmContainerName: 'state'
     backendAzureRmKey: '3pipeline.tfstate'
-    environmentServiceNameAzureRM: 
 
 - task: TerraformTaskV3@3
   inputs:
     provider: 'azurerm'
     command: 'apply'
     workingDirectory: '2-modules'
-    environmentServiceNameAzureRM: 'Visual Studio Premium with MSDN(2)(7ed35d9d-6e1e-428e-8325-fcbaa8142bc2)'
+    commandOptions: '--var-file="demo.d.tfvars"'
+    environmentServiceNameAzureRM: 'Visual Studio Premium with MSDN(7ed35d9d-6e1e-428e-8325-fcbaa8142bc2)'
